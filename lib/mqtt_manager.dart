@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
-import 'package:uuid/v4.dart';
+import 'package:uuid/uuid.dart';
 
 class MqttManager {
   final String broker;
@@ -58,9 +58,6 @@ class MqttManager {
         .withClientIdentifier(clientId)
         .authenticateAs(userName, password)
         .startClean() // 비연속 세션
-        .withWillTopic('disconnect') // 비정상 연결 해제 시 토픽
-        .withWillMessage(
-        '$clientId disconnected unexpectedly') //비정상 연결 해제 시 메세지
         .withWillQos(MqttQos.atMostOnce);
 
     _client.connectionMessage = connMessage;
@@ -144,4 +141,4 @@ class MqttManager {
 }
 
 final mqttManager =
-MqttManager(broker: '192.168.219.122', clientId: UuidV4().toString());
+MqttManager(broker: '192.168.219.122', clientId: Uuid().v4());

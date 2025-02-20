@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* MqttManager 기본 기능(connect, subscribe, publish, listen 등)
+* Topic 구조 수립
