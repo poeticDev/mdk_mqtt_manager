@@ -1,39 +1,63 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## Topics
+
+- 구조
+    - 1안 : publisher/subscriber/type
+    - 2안(채택) : globalTopic(msgRoom)/publisher/type/target(#)
+  
+- Global Topics(msgRoom)
+    - node-mdk : 강의실 서버
+
+- publisher & target
+  - tablet
+  - kiosk
+  - node-mdk
+  - all(target only)
+  - {추가 가능}
+
+- 키오스크
+    - node-mdk/sensor/state
+    - node-mdk/{장비명}/msg
+    - kiosk/all/msg
+    -
+
+- 관제실용 장비
+    - obServer/{강의실명(서버)}/state
+    - obServer/{강의실명(서버)}/msg
+
+
+## Messages
+- sensor
+  ````json
+    {
+      "lecturePC" : "online",
+      "temperature": 24.5,
+      "humidity": 60,
+      "co2": 400
+    }
+
+  ````
+- node-mdk/msg
+  ````json
+  {
+    "msg": "",
+    "timestamp": 172039320,
+    "duration" : {
+      "day" : 0,
+      "hour" : 0.5,
+      "min" : 30
+     }
+  }
+  ````
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
+
 const like = 'sample';
 ```
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
