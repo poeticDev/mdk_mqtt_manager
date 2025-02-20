@@ -4,7 +4,6 @@ import 'dart:async';
 import 'dart:io';
 import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
-import 'package:uuid/uuid.dart';
 
 class MqttManager {
   final String broker;
@@ -139,6 +138,3 @@ class MqttManager {
     print('🔄 Ping 요청 전송');
   }
 }
-
-final mqttManager =
-MqttManager(broker: '192.168.219.122', clientId: Uuid().v4());

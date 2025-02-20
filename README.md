@@ -54,6 +54,13 @@
   ````
 
 ## Getting started
+dependencies:
+  mdk_mqtt_manager:
+    git:
+    url: https://github.com/poeticDev/mdk_mqtt_manager
+    ref: main
+  uuid: ^4.4.2
+  
 
 ## Usage
 
