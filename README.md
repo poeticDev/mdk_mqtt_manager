@@ -1,11 +1,13 @@
 ## Features
 
 ## Topics
-
 - 구조
     - 1안 : publisher/subscriber/type
-    - 2안(채택) : globalTopic(msgRoom)/publisher/type/target(#)
-  
+    - 2안(채택) : globalTopic(msgRoom)/publisher/target/type
+      - publishing topic : node-mdk/{나}/target/type
+      - subscribing topic : node-mdk/+/{나}/#
+      
+
 - Global Topics(msgRoom)
     - node-mdk : 강의실 서버
 
